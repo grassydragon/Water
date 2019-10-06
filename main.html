@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Water</title>
+    <link rel="stylesheet" href="res/css/main.css">
+    <script src="lib/js/matrix4.js"></script>
+    <script src="lib/js/vector2.js"></script>
+    <script src="lib/js/vector3.js"></script>
+    <script src="lib/js/vector4.js"></script>
+    <script src="src/js/webgl.js"></script>
+    <script src="src/js/file-loader.js"></script>
+    <script src="src/js/camera.js"></script>
+    <script src="src/js/light.js"></script>
+    <script src="src/js/water.js"></script>
+    <script src="src/js/wave-state.js"></script>
+    <script src="src/js/wave.js"></script>
+    <script src="src/js/bottom.js"></script>
+    <script src="src/js/main.js"></script>
+</head>
+<body>
+<div id="grid">
+    <canvas id="canvas"></canvas>
+    <div id="toolbar">
+        <p>Water Height</p>
+        <label for="height-input">H</label>
+        <input type="range" id="height-input" min="0.5" max="1.5" step="0.05" value="1" autocomplete="off">
+        <div>
+            <label for="random-waves-input">Random Waves</label>
+            <input type="radio" name="mode" id="random-waves-input" autocomplete="off" checked>
+        </div>
+        <div>
+            <label for="interact-with-water-input">Interact with Water</label>
+            <input type="radio" name="mode" id="interact-with-water-input" autocomplete="off">
+        </div>
+        <p>Load Texture</p>
+        <input type="file" id="texture-input" accept="image/jpeg" autocomplete="off">
+        <button type="button" id="save-image-button">Save Image</button>
+    </div>
+    <div id="about">
+        <p>Course Project 2018-2019 Nikita Zaytsev</p>
+    </div>
+</div>
+</body>
+</html>
