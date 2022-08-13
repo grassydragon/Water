@@ -39,19 +39,17 @@ class FileLoader {
      * Loads the files asynchronously
      */
     loadFiles() {
-        let instance = this;
-
-        this.files.forEach( function (currentValue, currentKey, set) {
+        this.files.forEach((currentValue, currentKey, set) => {
             let file = currentValue;
 
             let request = new XMLHttpRequest();
 
-            request.onreadystatechange = function () {
+            request.onreadystatechange = () => {
                 if (request.readyState === 4) {
                     if (request.status === 200) {
-                        instance.sources.set(file, request.responseText);
+                        this.sources.set(file, request.responseText);
 
-                        if (instance.sources.size === instance.files.size && instance.onload instanceof Function) instance.onload();
+                        if (this.sources.size === this.files.size && this.onload instanceof Function) this.onload();
                     }
                     else {
                         throw `Loader.load: the request for the file "${file}" completed with a response code ${request.status}`;

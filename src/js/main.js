@@ -84,7 +84,7 @@ let mouseMoved;
 
 let mouseX, mouseY;
 
-window.onload = function () {
+window.onload = () => {
     fileLoader.addFile(NORMAL_HEIGHT_VS);
     fileLoader.addFile(NORMAL_HEIGHT_FS);
 
@@ -261,24 +261,24 @@ function initialize() {
 function initializeElements() {
     canvas = document.getElementById("canvas");
 
-    canvas.onclick = function (event) {
+    canvas.onclick = (event) => {
         if (!(mouseMoved || randomWaves)) {
             interactWithWater(event.clientX, event.clientY);
         }
     };
 
-    canvas.onmousedown = function (event) {
+    canvas.onmousedown = (event) => {
         mouseMoved = false;
 
         mouseX = event.clientX;
         mouseY = event.clientY;
 
-        document.onmouseup = function () {
+        document.onmouseup = () => {
             document.onmouseup = null;
             document.onmousemove = null;
         };
 
-        document.onmousemove = function (event) {
+        document.onmousemove = (event) => {
             camera.horizontal -= (event.clientX - mouseX) / canvas.width * Math.PI;
             camera.vertical += (event.clientY - mouseY) / canvas.height * Math.PI;
 
@@ -289,7 +289,7 @@ function initializeElements() {
         };
     };
 
-    canvas.onwheel = function (event) {
+    canvas.onwheel = (event) => {
         camera.distance += event.deltaY;
     };
 
@@ -309,13 +309,13 @@ function initializeElements() {
 
     textureInput = document.getElementById("texture-input");
 
-    textureInput.onchange = function () {
+    textureInput.onchange = () => {
         if (textureInput.files.length === 1 && textureInput.files[0].type === "image/jpeg") {
             let image = bottom.image;
 
             let url = URL.createObjectURL(textureInput.files[0]);
 
-            image.onload = function () {
+            image.onload = () => {
                 URL.revokeObjectURL(url);
 
                 gl.bindTexture(gl.TEXTURE_2D, bottomTexture);
@@ -331,7 +331,7 @@ function initializeElements() {
 
     saveImageButton = document.getElementById("save-image-button");
 
-    saveImageButton.onclick = function () {
+    saveImageButton.onclick = () => {
         saveImage = true;
     }
 }
