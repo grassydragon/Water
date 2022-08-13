@@ -11,4 +11,5 @@ class Wave {
         this.start = 0;
         this.stop = 0;
     }
+
 }

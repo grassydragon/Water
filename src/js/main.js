@@ -442,7 +442,6 @@ function initializeVariables() {
         u_positionTexture: gl.getUniformLocation(waterProgram, "u_positionTexture"),
         u_light: gl.getUniformLocation(waterProgram, "u_light"),
         u_matrix: gl.getUniformLocation(waterProgram, "u_matrix")
-
     };
 }
 
