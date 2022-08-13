@@ -667,7 +667,7 @@ function drawBottom() {
     gl.activeTexture(gl.TEXTURE0);
     gl.bindTexture(gl.TEXTURE_2D, bottomTexture);
 
-    gl.uniform1i(uniforms.u_causticTexture, 0);
+    gl.uniform1i(uniforms.u_bottomTexture, 0);
 
     gl.activeTexture(gl.TEXTURE1);
     gl.bindTexture(gl.TEXTURE_2D, causticTexture);
