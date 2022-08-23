@@ -1,4 +1,4 @@
-class Bottom {
+export class Bottom {
 
     constructor() {
         this.positions = new Int8Array([-1, -1, -1, 1, 1, -1, 1, 1]);

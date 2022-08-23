@@ -1,4 +1,4 @@
-class FileLoader {
+export class FileLoader {
 
     /**
      * Constructor

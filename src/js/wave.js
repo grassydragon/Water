@@ -1,4 +1,7 @@
-class Wave {
+import { Vector2 } from "../../lib/js/vector2.js";
+import { WaveState } from "./wave-state.js";
+
+export class Wave {
 
     constructor() {
         this.state = WaveState.INACTIVE;

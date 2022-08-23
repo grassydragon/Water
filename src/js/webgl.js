@@ -1,4 +1,4 @@
-class WebGL {
+export class WebGL {
 
     /**
      * Creates the shader

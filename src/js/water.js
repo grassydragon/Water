@@ -1,4 +1,4 @@
-class Water {
+export class Water {
 
     /**
      * Constructor

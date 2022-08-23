@@ -1,4 +1,6 @@
-class Camera {
+import { Vector3 } from "../../lib/js/vector3.js";
+
+export class Camera {
 
     /**
      * Constructor

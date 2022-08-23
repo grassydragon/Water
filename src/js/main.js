@@ -1,3 +1,14 @@
+import { Matrix4 } from "../../lib/js/matrix4.js";
+import { Vector3 } from "../../lib/js/vector3.js";
+import { WebGL } from "./webgl.js";
+import { FileLoader } from "./file-loader.js";
+import { Camera } from "./camera.js";
+import { Light } from "./light.js";
+import { Water } from "./water.js";
+import { WaveState } from "./wave-state.js";
+import { Wave } from "./wave.js";
+import { Bottom } from "./bottom.js";
+
 const NORMAL_HEIGHT_VS = "src/glsl/normal-height-vs.glsl";
 const NORMAL_HEIGHT_FS = "src/glsl/normal-height-fs.glsl";
 
